@@ -3,35 +3,41 @@
     <h1>Admin &raquo; Dashboard</h1>
   </header>
 
-  <div>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Products in Database: <%= @product_count %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @products.each do |product| %>
+  <div class="panel panel-default products">
+    <div class="table-wrapper">
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td><%= product.name %></td>
+            <th>Products in Database: <%= @product_count %></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @products.each do |product| %>
+            <tr>
+              <td>
+                <%= link_to product.name, product_path(product) %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Categories in Database: <%= @category_count %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @categories.each do |category| %>
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td><%= category.name %></td>
+            <th>Categories in Database: <%= @category_count %></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td>
+                <%= link_to category.name, category_path(category) %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>

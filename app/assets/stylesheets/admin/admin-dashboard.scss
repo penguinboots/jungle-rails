@@ -1,0 +1,29 @@
+.admin-dashboard {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 30%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    margin-right: 20px;
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    td {
+      padding-left: 24px;
+    }
+  }
+
+  .table-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
