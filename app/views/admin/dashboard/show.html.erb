@@ -3,38 +3,35 @@
     <h1>Admin &raquo; Dashboard</h1>
   </header>
 
-  <div class="panel panel-default products">
-
+  <div>
     <table class="table table-bordered">
       <thead>
-          <th>Products in Database : <%= @product_count %></th>
+        <tr>
+          <th>Products in Database: <%= @product_count %></th>
+        </tr>
       </thead>
       <tbody>
-          <td>
-            <% @products.each do |product| %>
-              <tr>
-                <td><%= product.name %></td>
-              </tr>
-            <% end %>
-          </td>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.name %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
 
     <table class="table table-bordered">
       <thead>
-          <th>Categories in Database : <%= @category_count %></th>
+        <tr>
+          <th>Categories in Database: <%= @category_count %></th>
+        </tr>
       </thead>
       <tbody>
-          <td>
-            <% @categories.each do |category| %>
-              <tr>
-                <td><%= category.name %></td>
-              </tr>
-            <% end %>
-          </td>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.name %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
-
   </div>
-
 </section>
