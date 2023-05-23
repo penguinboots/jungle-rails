@@ -14,13 +14,20 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
+   
+  <div class="warnings">
     <% if notice %>
-    	<%= notice %>
+      <div class="alert alert-primary" role="alert">
+        <%= notice %>
+      </div>
     <% end %>
-    
+
     <% if alert %>
-      <%= alert %>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+      </div>
     <% end %>
+  </div>
 
     <%= yield %>
   </main>
