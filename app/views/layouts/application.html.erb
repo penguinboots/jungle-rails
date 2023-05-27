@@ -14,6 +14,21 @@
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
+   
+  <div class="warnings">
+    <% if notice %>
+      <div class="alert alert-primary" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-danger" role="alert">
+        <%= alert %>
+      </div>
+    <% end %>
+  </div>
+
     <%= yield %>
   </main>
 
@@ -23,7 +38,7 @@
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Help</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About</a></li>
     </ul>
     <p class="text-center text-muted">© 2021 Jungle, Inc</p>
   </footer>
